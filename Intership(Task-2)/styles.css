@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif; /* Default sans-serif font */
+    background-image: url('background.jpg'); /* Add the path to your background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically and horizontally */
+    margin: 0;
+    height: 100vh; /* Ensure the body takes full viewport height */
+}
+
+.navbar {
+    width: 100%;
+    color: #9903df;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .logo {
+    width: 40px; /* Adjust width of the logo */
+    height: 40px; /* Adjust height of the logo */
+    border-radius: 50%; /* Make the logo circular */
+    margin-right: 10px; /* Adjust margin for spacing */
+    overflow: hidden; /* Ensure content within circle is clipped */
+}
+
+.nav-left .logo img {
+    width: 100%; /* Ensure image fills circular container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-left h2 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif; /* Orbitron font for the title */
+}
+
+.nav-right {
+    font-size: 18px;
+    line-height: 1.5; /* Adjust line height to ensure proper alignment */
+    font-family: 'Arial', sans-serif; /* Sans-serif font for date and time */
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Take full width of parent container */
+    max-width: 400px; /* Limit max-width for better readability */
+    text-align: center;
+    margin: auto; /* Center horizontally */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif; /* Orbitron font for the title */
+}
+
+#taskInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #9903df;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #81628f;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px; /* Example max-height for the list */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max-height */
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ensure relative positioning for ::after pseudo-element */
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust transparency as needed */
+}
+
+.delete-button {
+    background-color: #9903df;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #81628f;
+}
+
+.footer {
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: transparent; /* Makes the footer background transparent */
+    font-size: 12px; /* Decrease the text size */
+}
+
+.feature {
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%; /* Adjust width for better spacing */
+    max-width: 600px; /* Set maximum width for responsiveness */
+    height: auto; /* Automatically adjust height */
+    text-align: left;
+    color: #fff; /* Keep text color white for readability on background */
+    background: rgba(255, 255, 255, 0.1); /* Add transparent effect */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
